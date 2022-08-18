@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import Card from '../Card/Card'
 import S from './Form.module.css'
 import image from '../../assets/image.svg'
+
 
 const Form = () => {
 
@@ -18,8 +20,9 @@ const Form = () => {
     const request = await fetch(url)
     const json = await request.json()
     setInfos(json)
-    console.log(json);
   }
+
+  console.log(infos);
 
   return (    
 
@@ -28,9 +31,19 @@ const Form = () => {
         <form className={S.form}>
         <label>Digite o seu Cep</label>
         <input type="text" value={cep} placeholder='ex:18466-000' onChange={handleCep}></input>
-        <button onClick={handleReq}>Busca cep</button>
+        <button className={S.btn} onClick={handleReq}>Busca cep</button>
+        </form>
 
-    </form>
+    <Card 
+    cep = {infos ? infos.cep : ''}
+    logradouro = {infos ? infos.logradouro : ''}    
+    bairro = {infos ? infos.bairro : ''}
+    uf = {infos ? infos.uf : ''}
+    localidade = {infos ? infos.localidade : ''}
+    complemento = {infos ? infos.complemento : ''}
+    />
+    
+
     </div>
     
   )

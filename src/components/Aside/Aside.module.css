@@ -1,3 +1,11 @@
 .aside{
-    
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: tomato;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 50px;
 }
