@@ -1,11 +1,27 @@
 .aside{
     right: 0;
-    width: 50%;
+    width: 30%;
     height: 100vh;
-    background-color: tomato;
+    background-image: linear-gradient(to bottom, #FFE600 0%, #FFD400 100%);
+    background-clip: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .titulo {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 50px;
+    color: #00416B;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    background-color: #ffffff;
+    color: #00416B;
+    border-radius: 25px;
+    width: 50%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
